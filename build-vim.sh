@@ -17,8 +17,3 @@ git pull origin master
 
 make clean
 sudo make install
-
-sudo update-alternatives --install /usr/bin/editor editor $(which vim) 1
-sudo update-alternatives --set editor $(which vim)
-sudo update-alternatives --install /usr/bin/vi vi $(which vim) 1
-sudo update-alternatives --set vi $(which vim)
