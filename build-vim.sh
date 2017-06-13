@@ -8,7 +8,6 @@ set -eu
 
 echo 'Cleaning repo...'
 git clean -f
-make distclean
 
 echo 'Garbage collection...'
 git gc
@@ -18,6 +17,8 @@ git reset --hard HEAD
 
 echo 'Pulling changes from remote...'
 git pull origin master
+
+make -j2 distclean
 
 ./configure --with-features=huge \
             --enable-fail-if-missing \
@@ -33,5 +34,4 @@ git pull origin master
             --with-luajit \
             --enable-gui=auto \
 
-make -j2 clean
-sudo make install
+sudo make -j2 install
