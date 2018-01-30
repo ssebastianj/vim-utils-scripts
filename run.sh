@@ -25,3 +25,6 @@ cd "$START_DIR"
 ./build-install-vim.sh "$REPO_DIR"
 cd "$START_DIR"
 
+# Update alternatives
+./update-vim-alternatives.sh
+
