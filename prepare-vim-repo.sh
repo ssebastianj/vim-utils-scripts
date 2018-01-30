@@ -20,6 +20,7 @@ git reset --hard HEAD
 
 echo 'Pulling changes from remote...'
 git pull origin master
+git fetch --tags
 
 make -j2 clean
 make -j2 distclean
