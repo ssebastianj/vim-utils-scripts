@@ -2,10 +2,9 @@
 
 # Remome ViM packages
 
-set -eux
+set -eu
 
 echo 'Removing previously installed VIM packages...'
 
-sudo dpkg --remove vim
-sudo apt-get remove --purge --yes vim vim-runtime gvim
-sudo apt-get remove --purge --yes  vim-tiny vim-common vim-gui-common vim-nox vim-gnome
+sudo apt remove --purge --yes vim vim-runtime gvim
+sudo apt remove --purge --yes  vim-tiny vim-common vim-gui-common vim-nox vim-gnome
