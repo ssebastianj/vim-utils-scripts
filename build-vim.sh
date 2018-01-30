@@ -7,7 +7,7 @@
 set -eu
 
 echo 'Cleaning repo...'
-git clean -f
+git clean -ff
 
 echo 'Garbage collection...'
 git gc
@@ -18,6 +18,7 @@ git reset --hard HEAD
 echo 'Pulling changes from remote...'
 git pull origin master
 
+make -j2 clean
 make -j2 distclean
 
 ./configure --with-features=huge \
@@ -34,4 +35,9 @@ make -j2 distclean
             --with-luajit \
             --enable-gui=auto \
 
-sudo make -j2 install
+sudo checkinstall \
+  --maintainer=ssebastianj@gmail.com \
+  --deldoc=yes \
+  --deldesc=yes \
+  --delspec=yes
+
