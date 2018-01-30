@@ -10,8 +10,12 @@ REPO_DIR="$1"
 cd "$REPO_DIR"
 
 sudo checkinstall \
+  --default \
+  --pkgname=vim \
+  --pkgversion='2:8.0.build' \
+  --pkggroup=editors \
+  --provides=editor \
   --maintainer='ssebastianj[at]gmail.com' \
-  --deldoc=yes \
-  --deldesc=yes \
-  --delspec=yes
+  --gzman \
+  --showinstall=no \
 
