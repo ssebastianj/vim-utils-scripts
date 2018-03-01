@@ -6,8 +6,8 @@
 
 set -eu
 
-REPO_DIR="$1"
-cd "$REPO_DIR"
+REPO_DIR="${1}"
+cd "${REPO_DIR}"
 
 ./configure --with-features=huge \
             --enable-fail-if-missing \
@@ -23,5 +23,4 @@ cd "$REPO_DIR"
             --enable-perlinterp \
             --enable-luainterp \
             --with-luajit \
-            --enable-gui=auto \
-
+            --enable-gui=auto

@@ -6,8 +6,8 @@
 
 set -eu
 
-REPO_DIR="$1"
-cd "$REPO_DIR"
+REPO_DIR="${1}"
+cd "${REPO_DIR}"
 
 echo 'Cleaning repo...'
 git clean -ff
