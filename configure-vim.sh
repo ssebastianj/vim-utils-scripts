@@ -18,7 +18,7 @@ cd "${REPO_DIR}"
             --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu \
             --enable-python3interp \
             --with-python3-command=python3.7 \
-            --with-python3-config-dir=/usr/li/python3.7/config-x86_64-linux-gnu \
+            --with-python3-config-dir=/usr/lib/python3.7/config-x86_64-linux-gnu \
             --enable-rubyinterp \
             --with-ruby-command=/usr/bin/ruby \
             --enable-perlinterp \
